@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  link: MyString
+  altText: MyString
+  captionText: MyText
+  possition: 1
+  right: 1
+  textAllign: MyString
+  maxWidth: 1
+  top: 1
+  marginLeft: 1
+
+two:
+  link: MyString
+  altText: MyString
+  captionText: MyText
+  possition: 1
+  right: 1
+  textAllign: MyString
+  maxWidth: 1
+  top: 1
+  marginLeft: 1

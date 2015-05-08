@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Slide Show Images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>image</th>
+      <th>Alttext</th>
+      <th>Captiontext</th>
+      <th>Possition</th>
+      <th>Right</th>
+      <th>Textallign</th>
+      <th>Maxwidth</th>
+      <th>Top</th>
+      <th>Marginleft</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @slide_show_images.each do |slide_show_image| %>
+      <tr>
+        <td><%= image_tag slide_show_image.link, width: '40', height: '30' %></td>
+        <td><%= slide_show_image.altText %></td>
+        <td><%= slide_show_image.captionText %></td>
+        <td><%= slide_show_image.possition %></td>
+        <td><%= slide_show_image.right %></td>
+        <td><%= slide_show_image.textAllign %></td>
+        <td><%= slide_show_image.maxWidth %></td>
+        <td><%= slide_show_image.top %></td>
+        <td><%= slide_show_image.marginLeft %></td>
+        <td><%= link_to 'Show', slide_show_image %></td>
+        <td><%= link_to 'Edit', edit_slide_show_image_path(slide_show_image) %></td>
+        <td><%= link_to 'Destroy', slide_show_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Slide show image', new_slide_show_image_path %>
