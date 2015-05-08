@@ -1,0 +1,59 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8"
+    meta content="IE=edge" http-equiv="X-UA-Compatible"
+    meta content="width=device-width, initial-scale=1" name="viewport"
+
+    title TaxworldCoUk
+
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true 
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags 
+
+  body
+    .container
+      .pull-right.hidden-xs
+        = link_to 'https://www.linkedin.com/company/taxworld-ltd', class: "btn btn-circle" do %
+          .fa-stack.fa-lg
+            i.fa.fa-circle.fa-stack-2x.fa-taxworld-bg
+            i.fa.fa-linkedin.fa-stack-1x.fa-taxworld-icon
+        = link_to 'https://twitter.com/Taxworlduk', class: "btn btn-circle" do %     
+          .fa-stack.fa-lg
+            i.fa.fa-circle.fa-stack-2x.fa-taxworld-bg
+            i.fa.fa-twitter.fa-stack-1x.fa-taxworld-icon
+        
+    nav.navbar.navbar-inverse.navbar-top
+      .container
+        .navbar-header
+          button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+
+        #navbar.navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li = link_to 'Home', home_path
+            li = link_to 'Images', root_path 
+            
+    = yield
+      
+   
+    .navbar.navbar-default.navbar-bottom
+      .container
+        .pull-right
+          p.navbar-text  
+            '
+            = link_to 'About us'
+            '  | 
+            = link_to 'Condition of use'
+            '  | 
+            = link_to 'Privacy policy'
+            '  | 
+            = link_to 'Refund policy'
+            '  | 
+                All rights reserved Taxworld Ltd  
+            '  | 
+            = Time.now.year 
+            '

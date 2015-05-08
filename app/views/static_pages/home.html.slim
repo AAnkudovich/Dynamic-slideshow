@@ -1,0 +1,21 @@
+/ #full-width-slideshow.carousel.slide.hidden-xs
+/   ol.carousel-indicators
+/     li.active data-target="#full-width-slideshow" data-slide-to="0"
+/     li data-target="#full-width-slideshow" data-slide-to="1"
+/   .carousel-inner
+/     @slide_show_images.each do |slide_show_image|
+/       .item
+/       = image_tag(slide_show_image.link )
+/       .carousel-caption
+/         h4 
+/           | Phone image lorem ipsum .... lorem ipsum ... lorem ipsim 
+/     a.carousel-control.left href ="#full-width-slideshow" data-slide="prev"
+/       .icon-prev
+/     a.carousel-control.right href ="#full-width-slideshow" data-slide="next"
+/       .icon-next
+
+h1.visible-xs.text-center
+  | When slide show is gone this can come up
+.container
+  - @slide_show_images.each do |slide_show_image| 
+      p hello
