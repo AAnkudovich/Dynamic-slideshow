@@ -8,3 +8,4 @@ $ ->
 
 
   $( '.item:first' ).addClass( 'active');
+  $( '.carousel-indicators li:first' ).addClass( 'active');

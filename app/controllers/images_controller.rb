@@ -7,11 +7,6 @@ class ImagesController < ApplicationController
     @images = Image.all
   end
 
-  # GET /images/1
-  # GET /images/1.json
-  def show
-  end
-
   # GET /images/new
   def new
     @image = Image.new
@@ -28,7 +23,7 @@ class ImagesController < ApplicationController
 
     respond_to do |format|
       if @image.save
-        format.html { redirect_to @image, notice: 'Image was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Image was successfully created.' }
         format.json { render :show, status: :created, location: @image }
       else
         format.html { render :new }
@@ -42,7 +37,7 @@ class ImagesController < ApplicationController
   def update
     respond_to do |format|
       if @image.update(image_params)
-        format.html { redirect_to @image, notice: 'Image was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Image was successfully updated.' }
         format.json { render :show, status: :ok, location: @image }
       else
         format.html { render :edit }

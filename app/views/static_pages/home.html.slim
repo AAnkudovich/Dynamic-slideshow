@@ -1,7 +1,9 @@
 #full-width-slideshow.carousel.slide.hidden-xs
-  / ol.carousel-indicators
-  /   li.active data-target="#full-width-slideshow" data-slide-to="0"
-  /   li data-target="#full-width-slideshow" data-slide-to="1"
+  ol.carousel-indicators
+    - @images.each_with_index do |image, index| 
+      - if image.live
+        li data-target="#full-width-slideshow" data-slide-to=index
+    
   .carousel-inner
     - @images.sort { |a,b| a.possition <=> b.possition }.each do |image|
       - if image.live
