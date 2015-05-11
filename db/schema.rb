@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150508140845) do
+ActiveRecord::Schema.define(version: 20150511074214) do
+
+  create_table "images", force: :cascade do |t|
+    t.string   "link"
+    t.string   "altText"
+    t.text     "captionText"
+    t.integer  "possition"
+    t.integer  "right"
+    t.string   "textAlign"
+    t.integer  "maxWidth"
+    t.integer  "top"
+    t.integer  "marginLeft"
+    t.boolean  "live"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "slide_show_images", force: :cascade do |t|
     t.string   "link"

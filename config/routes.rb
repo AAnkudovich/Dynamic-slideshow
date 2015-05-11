@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  resources :images
+
   get 'static_pages/home'
 
   resources :slide_show_images
-  root 'slide_show_images#index'
+  root 'images#index'
    get 'home', to: 'static_pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.

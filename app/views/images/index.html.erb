@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>image</th>
+      <th>Alttext</th>
+      <th>Captiontext</th>
+      <th>Possition</th>
+      <th>Right</th>
+      <th>Textalign</th>
+      <th>Maxwidth</th>
+      <th>Top</th>
+      <th>Marginleft</th>
+      <th>Live</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @images.each do |image| %>
+      <tr>
+        <td><%= image.id %></td>
+        <td><%= image_tag image.link, width: '40', height: '30'  %></td>
+        <td><%= image.altText %></td>
+        <td><%= image.captionText %></td>
+        <td><%= image.possition %></td>
+        <td><%= image.right %></td>
+        <td><%= image.textAlign %></td>
+        <td><%= image.maxWidth %></td>
+        <td><%= image.top %></td>
+        <td><%= image.marginLeft %></td>
+        <td><%= image.live %></td>
+        <td><%= link_to 'Show', image %></td>
+        <td><%= link_to 'Edit', edit_image_path(image) %></td>
+        <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Image', new_image_path %>
