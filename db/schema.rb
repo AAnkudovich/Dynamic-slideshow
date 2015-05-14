@@ -28,19 +28,4 @@ ActiveRecord::Schema.define(version: 20150511074214) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "slide_show_images", force: :cascade do |t|
-    t.string   "link"
-    t.string   "altText"
-    t.text     "captionText"
-    t.integer  "possition"
-    t.integer  "right"
-    t.string   "textAllign"
-    t.integer  "maxWidth"
-    t.integer  "top"
-    t.integer  "marginLeft"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.boolean  "live"
-  end
-
 end

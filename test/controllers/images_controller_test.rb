@@ -24,11 +24,6 @@ class ImagesControllerTest < ActionController::TestCase
     assert_redirected_to image_path(assigns(:image))
   end
 
-  test "should show image" do
-    get :show, id: @image
-    assert_response :success
-  end
-
   test "should get edit" do
     get :edit, id: @image
     assert_response :success

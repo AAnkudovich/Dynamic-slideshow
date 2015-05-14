@@ -5,10 +5,10 @@
         li data-target="#full-width-slideshow" data-slide-to=index
     
   .carousel-inner
-    - @images.sort { |a,b| a.possition <=> b.possition }.each do |image|
+    - @images.each do |image|
       - if image.live
         .item
-          = image_tag(image.link )
+          = image_tag(image.link)
           .carousel-caption
             h4 
               = image.captionText 
@@ -19,7 +19,4 @@
 
 h1.visible-xs.text-center
   | When slide show is gone this can come up
-/ .container
-/   - @images.each do |i| 
-/     = image_tag i.link  
-/   end
+

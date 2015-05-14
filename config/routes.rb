@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   get 'static_pages/home'
 
-  resources :slide_show_images
   root 'images#index'
    get 'home', to: 'static_pages#home'
 
